@@ -16,3 +16,7 @@ func get_tile_pos() -> Vector2:
 
 func set_tile_pos(new_position: Vector2) -> void:
 	position = new_position
+
+
+func _on_mouse_entered():
+	print("teste")
