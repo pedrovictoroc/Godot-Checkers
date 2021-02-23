@@ -36,16 +36,19 @@ func generate_tile():
 						var new_tile = load("res://Player.tscn").instance()
 						add_child(new_tile)
 						new_tile.set_tile_pos(Vector2(j,i)*68)
+						new_tile.set_matrix_position(Vector2(j,i))
 						new_tile.set_group("black")
 					elif i == 3 or i == 4:
 						var new_tile = load("res://Player.tscn").instance()
 						add_child(new_tile)
 						new_tile.set_tile_pos(Vector2(j,i)*68)
+						new_tile.set_matrix_position(Vector2(j,i))
 						new_tile.set_group("blank")
 					else:
 						var new_tile = load("res://Player.tscn").instance()
 						add_child(new_tile)
 						new_tile.set_tile_pos(Vector2(j,i)*68)
+						new_tile.set_matrix_position(Vector2(j,i))
 						new_tile.set_group("white")
 			else:
 				if j%2 == 0:
@@ -53,14 +56,17 @@ func generate_tile():
 						var new_tile = load("res://Player.tscn").instance()
 						add_child(new_tile)
 						new_tile.set_tile_pos(Vector2(j,i)*68)
+						new_tile.set_matrix_position(Vector2(j,i))
 						new_tile.set_group("black")
 					elif i == 3 or i == 4:
 						var new_tile = load("res://Player.tscn").instance()
 						add_child(new_tile)
 						new_tile.set_tile_pos(Vector2(j,i)*68)
+						new_tile.set_matrix_position(Vector2(j,i))
 						new_tile.set_group("blank")
 					else:
 						var new_tile = load("res://Player.tscn").instance()
 						add_child(new_tile)
 						new_tile.set_tile_pos(Vector2(j,i)*68)
+						new_tile.set_matrix_position(Vector2(j,i))
 						new_tile.set_group("white")

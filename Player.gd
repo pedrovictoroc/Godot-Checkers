@@ -1,10 +1,12 @@
 extends Node2D
 class_name BoardTile
 
-var group = "blank"
 onready var sprite = $Sprite
 onready var redPlayer = load("res://RedPlayer.png")
 onready var bluePlayer = load("res://BluePlayer.png")
+
+var group = "blank"
+var matrix_position = Vector2.ZERO
 
 func _ready():
 	pass # Replace with function body.
@@ -22,6 +24,11 @@ func set_group(new_group: String) -> void:
 func set_tile_pos(new_position: Vector2) -> void:
 	position = new_position
 
+func set_matrix_position(new_position: Vector2) -> void:
+	matrix_position = new_position
 
 func _on_mouse_entered():
+	print("-----------------------")
 	print("Group: ", group)
+	print("Matrix position: ", matrix_position)
+	print("-----------------------")
