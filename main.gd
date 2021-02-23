@@ -28,8 +28,39 @@ func _on_Area2_input_event(viewport, event, shape_idx):
 		area1Sprite.texture = standard
 
 func generate_tile():
-	for x in range(BOARD_DIMENSIONS.x):
-		for y in range(BOARD_DIMENSIONS.y):
-			var new_tile = load("res://Player.tscn").instance()
-			add_child(new_tile)
-			new_tile.set_tile_pos(Vector2(x,y)*68)
+	for i in range(BOARD_DIMENSIONS.x):
+		for j in range(BOARD_DIMENSIONS.y):
+			if i%2 == 0:
+				if j%2 == 1:
+					if(i<3):
+						var new_tile = load("res://Player.tscn").instance()
+						add_child(new_tile)
+						new_tile.set_tile_pos(Vector2(j,i)*68)
+						new_tile.set_group("black")
+					elif i == 3 or i == 4:
+						var new_tile = load("res://Player.tscn").instance()
+						add_child(new_tile)
+						new_tile.set_tile_pos(Vector2(j,i)*68)
+						new_tile.set_group("blank")
+					else:
+						var new_tile = load("res://Player.tscn").instance()
+						add_child(new_tile)
+						new_tile.set_tile_pos(Vector2(j,i)*68)
+						new_tile.set_group("white")
+			else:
+				if j%2 == 0:
+					if(i<3):
+						var new_tile = load("res://Player.tscn").instance()
+						add_child(new_tile)
+						new_tile.set_tile_pos(Vector2(j,i)*68)
+						new_tile.set_group("black")
+					elif i == 3 or i == 4:
+						var new_tile = load("res://Player.tscn").instance()
+						add_child(new_tile)
+						new_tile.set_tile_pos(Vector2(j,i)*68)
+						new_tile.set_group("blank")
+					else:
+						var new_tile = load("res://Player.tscn").instance()
+						add_child(new_tile)
+						new_tile.set_tile_pos(Vector2(j,i)*68)
+						new_tile.set_group("white")
